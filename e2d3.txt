@@ -1,0 +1,46 @@
+1.構成
+E2D3							
+┣	アプリ動作説明書.xlsx 			・・・・・ 本書			
+┣	E2D3.xlsx 			・・・・・ アプリ実行ファイル(excel)			
+┣	AppCatalogsForShare						
+┃	┗	E2D3.xml 		・・・・・ マニフェスト記載ファイル			
+┗	htdocForOpen 						
+	┗	E2D3 		・・・・・ アプリケーションフォルダ			
+		┣	flags 	・・・・・ 画像フォルダ			
+		┣	2007.csv				
+		┣	2008.csv				
+		┣	2009.csv				
+		┣	2010.csv		データファイル		
+		┣	2011.csv				
+		┣	2012.csv				
+		┣	2013.csv				
+		┣	sprint_major-contract-awards-2013.csv				
+		┣	2007.json				
+		┣	2008.json				
+		┣	2009.json				
+		┣	2010.json		地図情報ファイル		
+		┣	2011.json				
+		┣	2012.json				
+		┣	2013.json				
+		┣	world-countries.json				
+		┣	wbc.js	・・・・・ 国別情報ファイル			
+		┗	index.html	・・・・・ 動作規定ファイル			
+
+2.webサーバを立てる
+  PID 4 が閉じていると web サーバが起動しない。
+  そのため、[タスクマネージャー]-[詳細]-[System](プロセス4)を終了する。 
+3.上のwebサーバ上で e2d3/index.html がweb提供されていることを確認。
+  xampp で appache を使う場合は、xampp\htdocs\E2D3 ← htdocForOpen フォルダをコピー
+4.[AppCatalogsForShare] を共有フォルダに設定しておく
+5.[AppCatalogsForShare]-[E2D3.xml] にある <SourceLocation DefaultValue="http://localhost/e2d3/index.html"/>
+  を編集。
+  編集内容: DefaultValue にe2d3/index.html のパスを記載。
+6.エクセルを開き、[ファイル]-[オプション]-[セキュリティ センター]-[セキュリティ センターの設定(T)...]
+  -[信頼できるアプリ カタログ]を選択
+  カタログのURLに 4 の共有フォルダを追加する。
+  ※指定の際にURL形式でしていする。つまり、\\127.0.0.1\AppCatalogsForShare 
+  また、「メニューに表示する」にチェック
+7.エクセルを開き、[挿入]-[アドイン]-[個人用アプリ]-[共有フォルダ]を選択し、
+  カタログに表示されている E2D3 を指定する。
+
+

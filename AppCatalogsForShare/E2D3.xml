@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
+   <Id>1CE25630-4B54-459d-8394-DAC7EF51F39E</Id>
+   <Version>1.0</Version>
+   <ProviderName>E2D3</ProviderName>
+   <DefaultLocale>ja-jp</DefaultLocale>
+   <DisplayName DefaultValue="E2D3"/>
+   <Description DefaultValue="銀行間の資金移動" />
+   <Capabilities>
+     <Capability Name="Workbook" />
+   </Capabilities>
+   <DefaultSettings>
+     <SourceLocation DefaultValue="http://localhost/e2d3/index.html"/>
+     <RequestedWidth>800</RequestedWidth> 
+     <RequestedHeight>800</RequestedHeight>
+   </DefaultSettings>
+   <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>
